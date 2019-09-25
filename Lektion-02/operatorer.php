@@ -47,20 +47,105 @@ echo '$x ';
 echo ' == ';
 echo '$y är ';
 echo $x==$y ; // 1 (samma innehåll)
-echo "<br><br>";  
-// false i PHP är ett tomt resultat
-// true i PHP är 1 
+echo "<br>";  
 
 echo '$x ';
 echo ' === ';
 echo '$y är ';
 echo  $x === $y;  // Kontrollerar innehåll och typ
-echo "<br><br>";  
+echo "<br>";  
 
 echo '$x ';
 echo ' != ';
 echo '$y är ';
 echo  $x != $y ; // inte lika med
+
+echo "<h3>OBS! false i PHP är ett tomt resultat<h3>";
+echo "<h3>OBS! true i PHP är 1 <h3>";
+
+echo "<h4>Spaceship-operator</h4>";
+$x = 5;
+$y = 5;
+echo '$x=' . $x . "<br>";
+echo '$y=' . $y . "<br>";
+echo '$x ';
+echo ' <=> '; // Spaceship-operator
+echo '$y är ';
+echo  $x <=> $y;  
+echo "<br>";  
+
+$x = 10;
+$y = 5;
+echo '$x=' . $x . "<br>";
+echo '$y=' . $y . "<br>";
+echo '$x ';
+echo ' <=> '; // Spaceship-operator
+echo '$y är ';
+echo  $x <=> $y;  
+echo "<br>"; 
+
+$x = 5;
+$y = 15;
+echo '$x=' . $x . "<br>";
+echo '$y=' . $y . "<br>";
+echo '$x ';
+echo ' <=> '; // Spaceship-operator
+echo '$y är ';
+echo  $x <=> $y;  
+echo "<br>"; 
+
+echo "<h3>Uppräkning</h3>";
+$x = 1;
+echo '$x=' . $x . "<br>";
+$x++; // x + 1
+echo '$x=' . $x . "<br>";
+$x++; // x + 1
+echo '$x=' . $x . "<br>";
+$x++; // x + 1
+echo '$x=' . $x . "<br>";
+
+echo "<h3>Nedräkning</h3>";
+$x = 1;
+echo '$x=' . $x . "<br>";
+$x--; // x - 1
+echo '$x=' . $x . "<br>";
+$x--; // x - 1
+echo '$x=' . $x . "<br>";
+$x--; // x - 1
+echo '$x=' . $x . "<br>";
+
+echo "<h2>Strängoperatorer</h2>";
+$name = "Mahmud";
+// Lägg till text med .=
+$name .= " Al ";   // Viktigt
+$name .= " Hakim";
+echo "<h3>$name</h3>";
+
+// Eller
+$name = "Mahmud";
+$name = $name . " Al Hakim";
+
+// Konkatenering
+$url = "https://webacademy.se";
+$txt = "Web Academy";
+
+$link = '<a href="' . $url . '">'. $txt . '</a>';
+
+echo "<h3>$link</h3>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "<br><br>"; 
 
 
@@ -79,3 +164,6 @@ echo "<br><br>";
 
 </body>
 </html>
+
+
+
