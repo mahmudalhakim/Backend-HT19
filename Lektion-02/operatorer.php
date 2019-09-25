@@ -21,14 +21,14 @@ $y = 3;
 
 
 echo "<h2>Aritmetiska operatorer</h2>";
-echo '$x=' . $x . "<br>";
-echo '$y=' . $y . "<br>";
-echo $x . "+" . $y . "=" . ($x+$y) . "<br>";
-echo $x . "-" . $y . "=" . ($x-$y) . "<br>";
-echo $x . "*" . $y . "=" . ($x*$y) . "<br>";
-echo $x . "/" . $y . "=" . ($x/$y) . "<br>";
-echo $x . "%" . $y . "=" . ($x%$y) . "<br>";
-echo $x . "^" . $y . "=" . ($x**$y) . "<hr>";
+echo '$x=' . $x . "<br>\n";
+echo '$y=' . $y . "<br>\n";
+echo $x . "+" . $y . "=" . ($x+$y) . "<br>\n";
+echo $x . "-" . $y . "=" . ($x-$y) . "<br>\n";
+echo $x . "*" . $y . "=" . ($x*$y) . "<br>\n";
+echo $x . "/" . $y . "=" . ($x/$y) . "<br>\n";
+echo $x . "%" . $y . "=" . ($x%$y) . "<br>\n";
+echo $x . "^" . $y . "=" . ($x**$y) . "<hr>\n";
 
 echo "<h2>Tilldelningsoperatorer</h2>";
 $x += 5; // = $x + 5 = 15
@@ -60,8 +60,8 @@ echo ' != ';
 echo '$y är ';
 echo  $x != $y ; // inte lika med
 
-echo "<h3>OBS! false i PHP är ett tomt resultat<h3>";
-echo "<h3>OBS! true i PHP är 1 <h3>";
+echo "<h3>OBS! false i PHP är ett tomt resultat</h3>";
+echo "<h3>OBS! true i PHP är 1 </h3>";
 
 echo "<h4>Spaceship-operator</h4>";
 $x = 5;
@@ -69,7 +69,7 @@ $y = 5;
 echo '$x=' . $x . "<br>";
 echo '$y=' . $y . "<br>";
 echo '$x ';
-echo ' <=> '; // Spaceship-operator
+echo ' &lt;=&gt;  '; // Spaceship-operator
 echo '$y är ';
 echo  $x <=> $y;  
 echo "<br>";  
@@ -79,7 +79,7 @@ $y = 5;
 echo '$x=' . $x . "<br>";
 echo '$y=' . $y . "<br>";
 echo '$x ';
-echo ' <=> '; // Spaceship-operator
+echo ' &lt;=&gt;  '; // Spaceship-operator
 echo '$y är ';
 echo  $x <=> $y;  
 echo "<br>"; 
@@ -89,7 +89,7 @@ $y = 15;
 echo '$x=' . $x . "<br>";
 echo '$y=' . $y . "<br>";
 echo '$x ';
-echo ' <=> '; // Spaceship-operator
+echo ' &lt;=&gt; '; // Spaceship-operator
 echo '$y är ';
 echo  $x <=> $y;  
 echo "<br>"; 
@@ -125,45 +125,6 @@ echo "<h3>$name</h3>";
 $name = "Mahmud";
 $name = $name . " Al Hakim";
 
-// Konkatenering
-$url = "https://webacademy.se";
-$txt = "Web Academy";
-
-$link = '<a href="' . $url . '">'. $txt . '</a>';
-
-echo "<h3>$link</h3>";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-echo "<br><br>"; 
-
-
-
-
-
-
-
-
-
 ?>
-
-
-
-
-
 </body>
 </html>
-
-
-
