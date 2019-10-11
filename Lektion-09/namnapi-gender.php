@@ -1,9 +1,10 @@
 <?php
 
+// Version 2 med Gender
+
 /* Pseudokod
 1. Ange innehållstypen JSON.
-2. Skapa två PHP-arrayer för att lagra 10 olika förnamn 
-   och 10 olika efternamn.
+2. Skapa två PHP-arrayer för att lagra 10 olika förnamn och 10 olika efternamn.
 3. Arbeta med GET-Request.
 Sätt en gräns/limit på antal namn till 10.
 Kontrollera om det finns data i GET-Requesten (t.ex. limit=20) Ändra limit i så fall.
@@ -18,17 +19,25 @@ header("Content-Type: application/json; charset=UTF-8");
 // 2. Skapa två PHP-arrayer
 // 2.1 Lagra 10 olika förnamn 
 $firstNames = [
-    "Mahmud" ,  // 0
-    "Kalle"  , 
-    "Erik"   , 
-    "Adam"   , 
-    "Fredrik", 
-    "Astrid" , 
-    "Yasmin" , 
-    "Sara"   , 
-    "Maria"  ,
-    "Åsa"      // 9
+    "Mahmud"    => "Male",  // 0
+    "Kalle"     => "Male", 
+    "Erik"      => "Male", 
+    "Adam"      => "Male", 
+    "Fredrik"   => "Male", 
+    "Astrid"    => "Female", 
+    "Yasmin"    => "Female", 
+    "Sara"      => "Female", 
+    "Maria"     => "Female",
+    "Åsa"       => "Female"  // 9
 ];
+
+// Test
+// print_r($firstNames);
+
+// Spara index i en ny array
+$firstNames_keys = array_keys($firstNames);
+// Test
+// print_r($firstNames_keys);
 
 // 2.2 Lagra 10 olika efternamn 
 $lastNames = array(
@@ -70,13 +79,20 @@ for($i=0 ; $i<$limit ; $i++):
 $randFN = rand(0,9);
 $randLN = rand(0,9);
 
-// Test att hämta ett förnamn från arrayen
-// echo $firstNames[$randFN];
-// echo $lastNames[$randLN];
+// Hämta ett förnamn från arrayen $firstNames_keys
+$firstName = $firstNames_keys[$randFN];
+
+// Hämta ett efternamn från arrayen $lastNames
+$lastname = $lastNames[$randLN];
+
+// Hämta gender från arrayen $firstNames
+$gender = $firstNames[$firstName];
+
 
 $name = array(
-    "firstname" => $firstNames[$randFN],
-    "lastname"  => $lastNames[$randLN]
+    "firstname" => $firstName,
+    "lastname"  => $lastname,
+    "Gender"    => $gender
 );
 // Testa den nya arrayen
 // echo "<pre>";
